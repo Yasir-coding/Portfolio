@@ -1,0 +1,427 @@
+/*Scoll-behavior gör så att länkarna på hemsidan scollar till de olika delarna av sidan istället för att hoppa*/
+*{
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body{
+  background-color: #E5E5DC;
+  color: #26495C;
+  font-family: 'Playfair Display', serif;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  background-color: #26495C;
+  padding: 20px;
+  height: 40px;
+  position:fixed;
+  width: 100%;
+}
+
+nav{
+  padding-left: 10px;
+  display: flex;
+  padding-right: 30px;
+}
+
+h2{
+  color: #C4A35A;
+  background-color: #26495C;
+  margin: 20px 0;
+}
+
+section{  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section h2{
+  color: #26495C;
+  background-color: #E5E5DC;
+}
+
+footer{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+nav li{
+  display: inline-block;
+  list-style: none;
+  padding: 5px;
+  font-size: 24px;
+  background-color: #26495C;
+  text-decoration: none;
+  margin: 0;
+}
+
+
+nav a{
+  text-decoration: none;
+  color: #C4A35A;
+}
+
+section h1{
+  margin-top: 90px;
+}
+
+#heroImage{
+  width: 80%;
+  margin: 20px 0;
+  border-radius: 5%;
+}
+
+#heroBtn{
+  color:#C4A35A;
+  background-color: #26495C;
+  width: 100px;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 4px;
+  border: 0;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 600;
+}
+
+#heroBtn:active{
+  background-color:#C4A35A;
+  color: #26495C;
+}
+
+
+#articleAbout{
+  text-align: center;
+}
+
+#about{
+  display: flex;
+  justify-content:space-evenly;
+}
+
+.box3{
+  border-bottom: solid #C4A35A 2px;
+  border-top: solid #C4A35A 2px;
+  width: 32%;
+}
+
+#articleSkills{
+  text-align: center;
+}
+
+#skills{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.box4Left{
+  width: 49%;
+  border-bottom: solid #C4A35A 2px;
+  border-top: solid #C4A35A 2px;
+}
+
+
+.box4Right{
+  width: 49%;
+  border-bottom: solid #C4A35A 2px;
+  border-top: solid #C4A35A 2px;
+}
+
+.box4DownLeft{
+  width: 49%;
+  border-bottom: solid #C4A35A 2px;
+}
+
+.box4DownRight{
+  width: 49%;
+  border-bottom: solid #C4A35A 2px;
+}
+
+#skillImgHtml{
+  width: 60%;
+}
+
+#skillImgCss{
+  width: 56%;
+  padding-top: 4px;
+}
+
+#skillImgJS{
+  width: 60%;
+  padding: 5px;
+}
+
+#skillImgFigma{
+  width: 40%;
+  padding-top: 10px;
+}
+
+
+aside{
+  display: none;
+  
+}
+
+
+aside h3, h4, ol li{
+  display: none;
+}
+
+
+#blogH2{
+  text-align: center;
+}
+
+#blogBox{
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px;
+  border-bottom: solid #C4A35A 2px;
+  border-top: solid #C4A35A 2px;
+  
+}
+/*Float används i detta fallet för att texten ska rinna under bilden*/
+#blogBox img{
+  float: left;
+  width: 30%;
+  border-radius: 5%;
+  margin-right: 2%;
+}
+
+
+#blogP1{
+  padding-left: 1%;
+}
+
+#blogBox2{
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px;
+  border-bottom: solid #C4A35A 2px;
+}
+
+#blogBox3{
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px;
+  border-bottom: solid #C4A35A 2px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+#blogImg3{
+  width: 30%;
+  
+}
+
+img{
+  width: 100%;
+  border-radius: 5%;
+  height: auto;
+}
+
+#blogP3{
+  width: 70%;
+  padding-right: 1%;
+}
+
+.hiddenP{
+  display: none;
+}
+
+#contactMe{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contactMe h2{
+  width: 100%;
+  text-align: center;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+}
+
+input[type="text"]{
+  width: 100%;
+  height: 20px;
+}
+
+textarea{
+  width: 100%;
+}
+
+input[type="submit"]{
+  color:#C4A35A;
+  background-color: #26495C;
+  width: 120px;
+  height: 40px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 0;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+footer small{
+  width: 30%;
+}
+
+/*Koden nedan definierar stylen för hemsidan när bredden överstiger 575px i bredden*/
+@media only screen and (min-width: 576px){
+  .hiddenP{
+    display: block;
+  }
+
+  #heroImage{
+    width: 60%;
+  }
+}
+
+/*Koden nedan definierar stylen för hemsidan när bredden överstiger 767px i bredden*/
+@media only screen and (min-width: 768px){
+
+  #heroImage{
+    width: 50%;
+  }
+
+  #skills{
+    width: 80%;
+    margin: auto auto;
+  }
+
+  #skills p{
+    width: 70%;
+    margin: auto auto;
+  }
+
+  .box4Left{
+    display: flex;
+  }
+
+  .box4Right{
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .box4DownLeft{
+    display: flex;
+  }
+
+  
+  .box4DownRight{
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  #skillImgHtml{
+    width: 30%;
+    
+  }
+  
+  #skillImgCss{
+    width: 30%;
+  }
+  
+  #skillImgJS{
+    width: 30%;
+  }
+  
+  #skillImgFigma{
+    width: 30%;
+    padding-bottom: 10px;
+  }
+
+
+  #blogAside{
+    display: flex;
+    
+  }
+
+  #blogAll{
+    width: 80%;
+  }
+
+  #blogBox{
+    padding-bottom: 30px;
+  }
+
+  aside{
+    display: block;
+    width: 20%;
+    border: solid 2px #C4A35A;
+    border-right: 0;
+  }
+
+  aside h3{
+    margin: 5px;
+  }
+  
+  h4{
+    margin: 10px;
+  }
+  
+  ol li{
+    list-style: none;
+    margin-left: 15px;
+    margin-bottom: 3px;
+  }
+
+  aside h3, h4, ol li{
+    display: block;
+  }
+
+  footer{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  footer small{
+    width: 25%;
+    text-align: center;
+  }
+
+  form{
+    width: 60%;
+  }
+}
+
+/*Koden nedan definierar stylen för hemsidan när bredden överstiger 1199px i bredden*/
+@media only screen and (min-width: 1200px){
+  #heroImage{
+    width: 40%;
+  }
+
+  .box3{
+    width: 25%;
+  }
+
+  #about{ 
+    width: 97%;
+    margin: 0 auto;
+  }
+
+  .box4, .box4Down{
+    width: 18%;
+  }
+
+  #blogAside{
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  form{
+    width: 50%;
+  }
+}
